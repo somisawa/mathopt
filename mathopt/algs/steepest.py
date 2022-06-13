@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import numpy as np
 from typing import List, Callable
 
@@ -13,7 +13,7 @@ class SteepestDescent(Core):
     grad: Callable[[np.ndarray], np.ndarray]
     stepsize: float
     n_iter: int
-    armijo: bool = False
+    armijo: bool = field(default=False)
 
     def _iter(self, x: np.ndarray) -> np.ndarray:
         if self.armijo:
