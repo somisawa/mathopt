@@ -14,7 +14,7 @@ stp.run(x_init, callbacks=[...])
 ```
 
 デフォルトでは backtracking をしていないが，引数に `armijo = True` を指定すると Armijo Rule を満たすステップ幅を探す。
-`stepsize = 1` とかでいい。
+このときは `stepsize = 1` とかでいい。
 
 ```python
 from mathopt.algs import SteepestDescent
@@ -25,12 +25,12 @@ stp.run(x_init, callbacks=[...])
 
 ## Nesterov
 
-使い方は同じ
+使い方は同じ。
 
 ```python
 from mathopt.algs import Nesterov
 
-nst = Nesterov(f, df, stepsize, 50)
+nst = Nesterov(f, df, stepsize, n_iter)
 nst.run(x_init, callbacks=[...])
 ```
 
