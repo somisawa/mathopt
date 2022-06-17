@@ -4,7 +4,7 @@
 # Usage
 ## 最急降下法
 
-次のように使う。ステップ幅の決め方は，目的関数が $L$ -平滑だと $\frac{1}{L}$ とかにする。
+次のように使う。ステップ幅の決め方は，目的関数が $L$ 平滑だと $\frac{1}{L}$ とかにする。
 
 ```python
 from mathopt.algs import SteepestDescent
